@@ -1,0 +1,34 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "table",
+      "name": "outputTable",
+      "tableName": "textmessages",
+      "connection": "techsharefunctions_STORAGE",
+      "direction": "out"
+    },
+    {
+      "type": "twilioSms",
+      "name": "smsMessage",
+      "accountSidSetting": "TwilioAccountSid",
+      "authTokenSetting": "TwilioAuthToken",
+      "from": "+16515055856",
+      "direction": "out"
+    }
+  ]
+}
